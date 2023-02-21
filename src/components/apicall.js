@@ -3,7 +3,7 @@
 //Realm, char, access token
 //consts are pvp-summary(depending on what call), namespace
 
-import axios, * as others from 'axios';
+import axios from 'axios';
 const options = {
     method: 'GET',
     url: 'https://mboum-finance.p.rapidapi.com/ne/news',

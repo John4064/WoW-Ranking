@@ -6,7 +6,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import InputBase from '@mui/material/InputBase';
-
+import { SearchBar } from './Searchbar';
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -59,15 +59,7 @@ export function Navbar(props){
                 sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
                 WoW Statistics
             </Typography>
-            <Search>
-                <SearchIconWrapper>
-                    <SearchIcon />
-                </SearchIconWrapper>
-                <StyledInputBase
-                    placeholder="Search…"
-                    inputProps={{ 'aria-label': 'search' }}
-                />
-            </Search>
+            <SearchBar></SearchBar>
         </Toolbar>
     </AppBar>
 </Box>
