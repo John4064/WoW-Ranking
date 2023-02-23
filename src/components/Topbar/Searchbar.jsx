@@ -3,15 +3,8 @@ import SearchIcon from "@mui/icons-material/Search";
 import InputBase from '@mui/material/InputBase';
 import React from 'react';
 import { useState } from 'react';
-function test(){
-  console.log(5);
-  return 5;
-}
-
-function filterData(data){
-  //Develop Regex
-  return data.toLowerCase();
-};
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 
 
@@ -38,6 +31,7 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    color: 'primary'
   }));
   
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
@@ -58,6 +52,15 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export function SearchBar(){
+  const dispatch = useDispatch()
+  var name= useSelector((state)=> state.name);
+
+  function onSearch(searchName){
+    //event.target.value
+    //Set Name Here
+    dispatch({type: 'ADD_NAME', name:searchName});
+
+  }
 
     const [searchFieldVal, setSearchFieldVal] = useState("Search…");
     return (<Search>
@@ -68,10 +71,11 @@ export function SearchBar(){
                 placeholder="Search…"
                 inputProps={{ 'aria-label': 'search' }}
                 onChange={(newVal) => setSearchFieldVal(newVal.target.value)}
+                //onChange={onSearch}
                 onKeyDown={(ev) => {
                   if (ev.key === 'Enter') {
                     // Do code here
-                    console.log(searchFieldVal);
+                    onSearch(searchFieldVal)
                     ev.preventDefault();
                   }
                 }}

@@ -6,13 +6,15 @@ import { Home } from "./pages/home/home";
 import appReducer from "./state/reducer";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from 'react-redux'
-import { connect } from "react-redux";
 
 const theme = createTheme({
   palette: {
     primary: {
       main: "#1a9e60",
     },
+    secondary:{
+      main: "#fff"
+    }
   },
 });
 let appStore = configureStore({reducer:appReducer});

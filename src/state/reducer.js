@@ -4,6 +4,16 @@
 //appStore.getState().name to get the name
 //appStore.dispatch({type: 'ADD_NAME', name:'Slimwind'});
 //appStore.dispatch({type: 'ADD_REALM', realm:'Sargeras'});
+
+
+/**
+ *  const tester: any = useSelector((state:any)=> state.name);
+
+    console.log(tester);
+    const dispatch = useDispatch()
+    dispatch({type: 'ADD_NAME', name:'Greg'});
+    const test: any = useSelector((state:any)=> state.name);
+ */
 const initialState = {
   name: "b",
   realm: ""

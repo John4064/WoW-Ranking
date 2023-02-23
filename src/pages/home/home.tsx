@@ -11,7 +11,6 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import { HomeCard } from '../../components/Data/HomeCard';
 import { PvpTable } from '../../components/Data/PvpTable';
-import { connect, useDispatch, useSelector } from "react-redux";
 
 const BodyWrapper = styled('div')(({ theme }) => ({
     color: 'black',
@@ -25,14 +24,7 @@ const BodyWrapper = styled('div')(({ theme }) => ({
 
 export function Home(){
     //{type: 'ADD_NAME', name:'Slimwind'}
-    const tester: any = useSelector((state:any)=> state.name);
 
-    console.log(tester);
-    const dispatch = useDispatch()
-    dispatch({type: 'ADD_NAME', name:'Slimwind'});
-    const test: any = useSelector((state:any)=> state.name);
-
-    console.log(test);
     return(<div className="App">
     
         <header className="App-header">
@@ -48,18 +40,18 @@ export function Home(){
             <p>Azeroth Daily</p>
             </Grid>
             <Grid  item xs={4}>
-            <HomeCard cardHeader="Lizard" imageName="logo192.png"
+            <HomeCard cardHeader="Lizard" imageName="logo512.png"
             cardBody="Lizards are a widespread group of squamate reptiles, with over 6,000
                 species, ranging across all continents except Antarctica"></HomeCard>
             </Grid>
             <Grid  item xs={4}>
-            <HomeCard cardHeader="Lizard" imageName="logo192.png"
+            <HomeCard cardHeader="Lizard" imageName="logo512.png"
             cardBody="Lizards are a widespread group of squamate reptiles, with over 6,000
                 species, ranging across all continents except Antarctica"></HomeCard>
 
             </Grid>
             <Grid  item xs={4}>
-            <HomeCard cardHeader="Lizard" imageName="logo192.png"
+            <HomeCard cardHeader="Lizard" imageName="logo512.png"
             cardBody="Lizards are a widespread group of squamate reptiles, with over 6,000
                 species, ranging across all continents except Antarctica"></HomeCard>
             </Grid>

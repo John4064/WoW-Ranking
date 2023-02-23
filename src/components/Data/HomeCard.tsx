@@ -16,7 +16,7 @@ export function HomeCard(props: cardData ){
             <CardActionArea>
             <CardMedia
                 component="img"
-                height="140"
+                height="210"
                 image= {props.imageName}
                 alt="Image Alt"
             />
