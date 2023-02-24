@@ -20,7 +20,6 @@ export function Navbar(props) {
   const dispatch = useDispatch()
   var realm= useSelector((state)=> state.realm);
 
-  
   function handleChange(event){
     //event.target.value
     //Set Realm Here
