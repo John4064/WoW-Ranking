@@ -1,11 +1,10 @@
 import "./App.css";
-import React from "react";
+import React, { useState } from "react";
 import { createTheme } from "@mui/material";
 import { ThemeProvider } from "@emotion/react";
 import { Home } from "./pages/home/home";
-import appReducer from "./state/reducer";
-import { configureStore } from "@reduxjs/toolkit";
-import { Provider } from 'react-redux'
+import { createContext } from "react";
+import Button from "@mui/material/Button";
 
 const theme = createTheme({
   palette: {
@@ -13,20 +12,29 @@ const theme = createTheme({
       main: "#1a9e60",
     },
     secondary:{
-      main: "#fff"
+      main: "#fff",
     }
   },
 });
-let appStore = configureStore({reducer:appReducer});
+
+export const UserContext = createContext();
+
 function App() {
   // The actions can be serialized, logged or stored and later replayed.
+  const [userProfile,setUserProfile] = useState({name: "", realm:"",});
+  const wrapUser={userProfile,setUserProfile};//obj.wrapUser.userProfile.value
+
+
 
   return (
-    <Provider store={appStore}>
-    <ThemeProvider theme={theme}>
-      <Home></Home>
-    </ThemeProvider>
-    </Provider>
+    <UserContext.Provider value={{wrapUser}}>
+        <ThemeProvider theme={theme}>
+          <Home></Home>
+          <Button sx={{borderRadius: 50}} variant="contained" color="info" onClick={() => console.log("BTN PRESS")}>
+        Switch Language (Current: {userProfile.name} Current: {userProfile.realm})
+      </Button>
+        </ThemeProvider>
+    </UserContext.Provider>
   );
 }
 //console.log(appStore.getState().name);

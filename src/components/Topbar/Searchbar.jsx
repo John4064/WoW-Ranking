@@ -3,9 +3,8 @@ import SearchIcon from "@mui/icons-material/Search";
 import InputBase from '@mui/material/InputBase';
 import React from 'react';
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
-
+import { useContext } from "react";
+import { UserContext } from '../../App';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -52,13 +51,14 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export function SearchBar(){
-  const dispatch = useDispatch()
-  var name= useSelector((state)=> state.name);
+  const user = useContext(UserContext);
+
 
   function onSearch(searchName){
     //event.target.value
     //Set Name Here
-    dispatch({type: 'ADD_NAME', name:searchName});
+    user.wrapUser.setUserProfile({name:searchName,realm:user.wrapUser.userProfile.realm})
+    console.log(user.wrapUser.userProfile.realm)
 
   }
 

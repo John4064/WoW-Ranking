@@ -5,6 +5,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import { UserContext } from '../../App';
+import { useContext } from "react";
+
 
 interface cardData{
     cardHeader: string;
@@ -12,6 +15,10 @@ interface cardData{
     imageName: string;
 }
 export function HomeCard(props: cardData ){
+
+    const user = useContext(UserContext);
+
+
     return(<Card sx={{ maxWidth: 345, border: 3,borderColor:'green'  }}>
             <CardActionArea>
             <CardMedia

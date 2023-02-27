@@ -8,23 +8,23 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
-
-
+import { useContext } from "react";
+import { UserContext } from '../../App';
 
 
 
 export function Navbar(props) {
   //Attributes
-  const dispatch = useDispatch()
-  var realm= useSelector((state)=> state.realm);
+  const user = useContext(UserContext);
+  var pendingRealm = "";
 
   function handleChange(event){
-    //event.target.value
-    //Set Realm Here
-    dispatch({type: 'ADD_REALM', realm:event.target.value});
+    //set realm here
+    pendingRealm=event.target.value;
+    user.wrapUser.setUserProfile({name:user.wrapUser.userProfile.name,realm:pendingRealm})
+    
   }
+
 
 
 
@@ -36,7 +36,7 @@ export function Navbar(props) {
           noWrap
           component="div"
           sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
-          WoW Statistics
+          WoW Ranking
         </Typography>
         <FormControl sx={{display: {xs: 'none', sm: 'inline'}}}size='small' color='secondary'>
         <InputLabel id="realm-select-label">Realm</InputLabel>
@@ -44,7 +44,7 @@ export function Navbar(props) {
             sx={{ width:200}}
             labelId="realm-select-label"
             id="realm-select"
-            value={realm}
+            value={pendingRealm}
             label="Realm"
             onChange={handleChange}
           >
