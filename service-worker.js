@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/WoW-Ranking/precache-manifest.39b19acc8dc06b31343295e5a099b239.js"
+  "/WoW-Ranking/precache-manifest.3cb89896551b779a78c5c4c686333a24.js"
 );
 
 workbox.clientsClaim();

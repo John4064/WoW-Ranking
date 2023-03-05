@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "a2f84d9aa2ec86029796",
+    "revision": "5c62443b60648cbefc22",
     "url": "/WoW-Ranking/static/css/main.70b2e842.chunk.css"
   },
   {
-    "revision": "a2f84d9aa2ec86029796",
-    "url": "/WoW-Ranking/static/js/main.a2f84d9a.chunk.js"
+    "revision": "5c62443b60648cbefc22",
+    "url": "/WoW-Ranking/static/js/main.5c62443b.chunk.js"
   },
   {
     "revision": "57fb75a2e8592a1edd30",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/WoW-Ranking/static/js/runtime~main.a07012a7.js"
   },
   {
-    "revision": "9173605e471b5400204fd3fe050dcf0f",
+    "revision": "a49a10cfd34f903cf52416451e92d7a9",
     "url": "/WoW-Ranking/index.html"
   }
 ];

@@ -1,7 +1,7 @@
 {
   "main.css": "/WoW-Ranking/static/css/main.70b2e842.chunk.css",
-  "main.js": "/WoW-Ranking/static/js/main.a2f84d9a.chunk.js",
-  "main.js.map": "/WoW-Ranking/static/js/main.a2f84d9a.chunk.js.map",
+  "main.js": "/WoW-Ranking/static/js/main.5c62443b.chunk.js",
+  "main.js.map": "/WoW-Ranking/static/js/main.5c62443b.chunk.js.map",
   "static/js/1.57fb75a2.chunk.js": "/WoW-Ranking/static/js/1.57fb75a2.chunk.js",
   "static/js/1.57fb75a2.chunk.js.map": "/WoW-Ranking/static/js/1.57fb75a2.chunk.js.map",
   "static/js/2.4b48df7e.chunk.js": "/WoW-Ranking/static/js/2.4b48df7e.chunk.js",
@@ -10,6 +10,6 @@
   "runtime~main.js.map": "/WoW-Ranking/static/js/runtime~main.a07012a7.js.map",
   "static/css/main.70b2e842.chunk.css.map": "/WoW-Ranking/static/css/main.70b2e842.chunk.css.map",
   "index.html": "/WoW-Ranking/index.html",
-  "precache-manifest.39b19acc8dc06b31343295e5a099b239.js": "/WoW-Ranking/precache-manifest.39b19acc8dc06b31343295e5a099b239.js",
+  "precache-manifest.3cb89896551b779a78c5c4c686333a24.js": "/WoW-Ranking/precache-manifest.3cb89896551b779a78c5c4c686333a24.js",
   "service-worker.js": "/WoW-Ranking/service-worker.js"
 }
