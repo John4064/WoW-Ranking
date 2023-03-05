@@ -38,6 +38,7 @@
       "last 1 safari version"
     ]
   },
+  "homepage": "https://john4064.github.io/Wow-Ranking",
   "devDependencies": {
     "eslint-config-react-app": "^7.0.1"
   }
