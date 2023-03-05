@@ -1,15 +1,15 @@
 {
-  "main.css": "/Wow-Ranking/static/css/main.70b2e842.chunk.css",
-  "main.js": "/Wow-Ranking/static/js/main.a2f84d9a.chunk.js",
-  "main.js.map": "/Wow-Ranking/static/js/main.a2f84d9a.chunk.js.map",
-  "static/js/1.57fb75a2.chunk.js": "/Wow-Ranking/static/js/1.57fb75a2.chunk.js",
-  "static/js/1.57fb75a2.chunk.js.map": "/Wow-Ranking/static/js/1.57fb75a2.chunk.js.map",
-  "static/js/2.4b48df7e.chunk.js": "/Wow-Ranking/static/js/2.4b48df7e.chunk.js",
-  "static/js/2.4b48df7e.chunk.js.map": "/Wow-Ranking/static/js/2.4b48df7e.chunk.js.map",
-  "runtime~main.js": "/Wow-Ranking/static/js/runtime~main.c362315d.js",
-  "runtime~main.js.map": "/Wow-Ranking/static/js/runtime~main.c362315d.js.map",
-  "static/css/main.70b2e842.chunk.css.map": "/Wow-Ranking/static/css/main.70b2e842.chunk.css.map",
-  "index.html": "/Wow-Ranking/index.html",
-  "precache-manifest.8e72006d475bc39368143876ac2e4f7b.js": "/Wow-Ranking/precache-manifest.8e72006d475bc39368143876ac2e4f7b.js",
-  "service-worker.js": "/Wow-Ranking/service-worker.js"
+  "main.css": "/WoW-Ranking/static/css/main.70b2e842.chunk.css",
+  "main.js": "/WoW-Ranking/static/js/main.a2f84d9a.chunk.js",
+  "main.js.map": "/WoW-Ranking/static/js/main.a2f84d9a.chunk.js.map",
+  "static/js/1.57fb75a2.chunk.js": "/WoW-Ranking/static/js/1.57fb75a2.chunk.js",
+  "static/js/1.57fb75a2.chunk.js.map": "/WoW-Ranking/static/js/1.57fb75a2.chunk.js.map",
+  "static/js/2.4b48df7e.chunk.js": "/WoW-Ranking/static/js/2.4b48df7e.chunk.js",
+  "static/js/2.4b48df7e.chunk.js.map": "/WoW-Ranking/static/js/2.4b48df7e.chunk.js.map",
+  "runtime~main.js": "/WoW-Ranking/static/js/runtime~main.a07012a7.js",
+  "runtime~main.js.map": "/WoW-Ranking/static/js/runtime~main.a07012a7.js.map",
+  "static/css/main.70b2e842.chunk.css.map": "/WoW-Ranking/static/css/main.70b2e842.chunk.css.map",
+  "index.html": "/WoW-Ranking/index.html",
+  "precache-manifest.39b19acc8dc06b31343295e5a099b239.js": "/WoW-Ranking/precache-manifest.39b19acc8dc06b31343295e5a099b239.js",
+  "service-worker.js": "/WoW-Ranking/service-worker.js"
 }

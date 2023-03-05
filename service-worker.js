@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Wow-Ranking/precache-manifest.8e72006d475bc39368143876ac2e4f7b.js"
+  "/WoW-Ranking/precache-manifest.39b19acc8dc06b31343295e5a099b239.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/Wow-Ranking/index.html", {
+workbox.routing.registerNavigationRoute("/WoW-Ranking/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
