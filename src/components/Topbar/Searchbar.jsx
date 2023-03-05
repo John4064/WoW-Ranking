@@ -5,7 +5,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useContext } from "react";
 import { UserContext } from '../../App';
-
+import { searchUser, test } from '../../actions/onSearch';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -53,12 +53,14 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export function SearchBar(){
   const user = useContext(UserContext);
 
-
   function onSearch(searchName){
     //event.target.value
     //Set Name Here
     user.wrapUser.setUserProfile({name:searchName,realm:user.wrapUser.userProfile.realm})
-    console.log(user.wrapUser.userProfile.realm)
+    if(searchName !== "" && user.wrapUser.userProfile.realm !== "" &&searchName !== "Search…"){
+        //Create alert telling to supply the info
+        searchUser(searchName,user.wrapUser.userProfile.realm);
+    }
 
   }
 
@@ -71,7 +73,6 @@ export function SearchBar(){
                 placeholder="Search…"
                 inputProps={{ 'aria-label': 'search' }}
                 onChange={(newVal) => setSearchFieldVal(newVal.target.value)}
-                //onChange={onSearch}
                 onKeyDown={(ev) => {
                   if (ev.key === 'Enter') {
                     // Do code here
