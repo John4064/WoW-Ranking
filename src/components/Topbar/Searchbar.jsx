@@ -5,7 +5,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useContext } from "react";
 import { UserContext } from '../../App';
-import { searchUser, test } from '../../actions/onSearch';
+import { searchUser} from '../../actions/onSearch';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
