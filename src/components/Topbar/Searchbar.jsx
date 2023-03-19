@@ -5,7 +5,8 @@ import React from 'react';
 import { useState } from 'react';
 import { useContext } from "react";
 import { UserContext } from '../../App';
-import { searchUser, test } from '../../actions/onSearch';
+import { searchUser} from '../../actions/onSearch';
+import { processProfileData } from '../../actions/processProfile';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -57,7 +58,10 @@ export function SearchBar(){
     //event.target.value
     //Set Name Here
     user.wrapUser.setUserProfile({name:searchName,realm:user.wrapUser.userProfile.realm})
-    if(searchName !== "" && user.wrapUser.userProfile.realm !== "" &&searchName !== "Search…"){
+    if(true){
+        console.log("NOT REAL API CALL!");
+        processProfileData("")
+    }else if(searchName !== "" && user.wrapUser.userProfile.realm !== "" &&searchName !== "Search…"){
         //Create alert telling to supply the info
         searchUser(searchName,user.wrapUser.userProfile.realm);
     }

@@ -1,9 +1,8 @@
 import axios from "axios";
-
-const token = "USH3HYS7SwSNAkHMhbTNviNTcMcjuDUrLC";//Always triple check token is right it seems buggy
-
-
+import { processProfileData } from "./processProfile";
+const token = "USipfZk8t7ubrLzb5x8mNRtUS7nmpOOvi0";//Always triple check token is right it seems buggy(do sample request in site)
 export function searchUser(name,realm){
+    let profileData = {};
     const options = {
         method: 'GET',
         url: ('https://us.api.blizzard.com/profile/wow/character/#realm/#name?namespace=profile-us&locale=en_US&access_token='+token).replace("#name",name.toLowerCase()).replace("#realm",realm.toLowerCase()),
@@ -12,13 +11,13 @@ export function searchUser(name,realm){
         responseEncoding: 'utf8', // default
     };
     console.log("START REQUEST");
+    console.log(name,realm);
     axios.request(options).then(function (response) {
-        console.log(response.data);
+        
+        profileData=response.data;
+        processProfileData(profileData);
     }).catch(function (error) {
-        console.error(error);
+        console.error(error)
+        console.error("Search Request Error");
     });
-    console.log("END REQUEST");
-}
-export function test(){
-    console.log("test")
 }
