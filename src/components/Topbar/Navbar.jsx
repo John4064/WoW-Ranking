@@ -48,9 +48,9 @@ export function Navbar(props) {
             label="Realm"
             onChange={handleChange}
           >
-            <MenuItem value={"Sargeras"}>Sargeras</MenuItem>
-            <MenuItem value={"Stormreaver"}>Stormreaver</MenuItem>
-            <MenuItem value={"Illidian"}>Illidian</MenuItem>
+            <MenuItem value={"sargeras"}>Sargeras</MenuItem>
+            <MenuItem value={"stormreaver"}>Stormreaver</MenuItem>
+            <MenuItem value={"illidian"}>Illidian</MenuItem>
           </Select>
         </FormControl>
 
