@@ -9,14 +9,21 @@ import Button from "@mui/material/Button";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#1a9e60",
+      main: "#0B2B33",
     },
     secondary:{
-      main: "#fff",
+      main: "#F5F2D5",
+    },
+    text:{
+      primary: "#F5F2D5"
+    },
+    background:{
+      primary:"#0B2B33",
+      secondary:"#F5F2D5",
     }
   },
 });
-
+//could create a recent list as context
 export const UserContext = createContext();
 export const SearchPvpDataContext = createContext();
 function App() {
@@ -33,7 +40,7 @@ function App() {
 
         <ThemeProvider theme={theme}>
           <Home></Home>
-          <Button sx={{borderRadius: 50}} variant="contained" color="info" onClick={() => console.log("BTN PRESS")}>
+          <Button sx={{borderRadius: 50,marginTop:5}} variant="contained" color="info" onClick={() => console.log("BTN PRESS")}>
         Switch Language (Current: {userProfile.name} Current: {userProfile.realm})
       </Button>
         </ThemeProvider>

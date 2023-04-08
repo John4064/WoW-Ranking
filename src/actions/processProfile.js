@@ -1,6 +1,6 @@
 import axios from "axios";
 //when we get a map of urls, add ttoken to end and excute call
-const token = "USipfZk8t7ubrLzb5x8mNRtUS7nmpOOvi0";//Always triple check token is right it seems buggy(do sample request in site)
+const token = "USkhckbjSr2zHuXAPO7gHXWdroo2uQcJjU";//Always triple check token is right it seems buggy(do sample request in site)
 const addon="&access_token="+token;
 
 

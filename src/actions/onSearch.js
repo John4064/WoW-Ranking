@@ -1,6 +1,6 @@
 import axios from "axios";
 import { processProfileData } from "./processProfile";
-const token = "USipfZk8t7ubrLzb5x8mNRtUS7nmpOOvi0";//Always triple check token is right it seems buggy(do sample request in site)
+const token = "USgQc9kuZCSIXIVBRK9JNqsx6YpLzRRBlq";//Always triple check token is right it seems buggy(do sample request in site)
 export function searchUser(name,realm){
     let profileData = {};
     const options = {

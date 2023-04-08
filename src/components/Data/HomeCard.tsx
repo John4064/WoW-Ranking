@@ -19,7 +19,7 @@ export function HomeCard(props: cardData ){
     const user = useContext(UserContext);
 
 
-    return(<Card sx={{ maxWidth: 345, border: 3,borderColor:'green'  }}>
+    return(<Card sx={{ maxWidth: 345, border: 3,borderColor:'$primary1'  }}>
             <CardActionArea>
             <CardMedia
                 component="img"
