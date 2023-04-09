@@ -26,24 +26,26 @@ const BodyWrapper = styled('div')(({ theme }) => ({
     padding: theme.spacing(1),
     textAlign: 'center',
     color: theme.palette.text.primary,
+    fontFamily: theme.typography.fontFamily 
   }));
-function alertOnClose(){
+
+  function alertOnClose(){
     console.log("Closed!");
 }
 export function Home(){
+
+    
     //{type: 'ADD_NAME', name:'Slimwind'}
     return(<div className="App">
     
         <header className="App-header">
             <Navbar></Navbar>
             </header>
-            <BodyWrapper>
-        <Container sx={{paddingTop: '25px'}}>
+            {/* <BodyWrapper>
+                </BodyWrapper> */}
+        <Container disableGutters={true} sx={{paddingTop: '25px'}}>
         {/*Alert Stack*/}
         {/* <BasicAlert text="Close Test"></BasicAlert> */}
-
-
-
         <Grid
             container
             spacing={3}
@@ -51,28 +53,38 @@ export function Home(){
             <Grid item xs={12}>
                 <Item><p>Azeroth Daily</p></Item>
             </Grid>
-            {/* <Grid  item xs={4}>
-            <HomeCard cardHeader="Lizard" imageName="logo512.png"
-            cardBody="Lizards are a widespread group of squamate reptiles, with over 6,000
-                species, ranging across all continents except Antarctica"></HomeCard>
-            </Grid>
-            <Grid  item xs={4}>
-            <HomeCard cardHeader="Lizard" imageName="logo512.png"
-            cardBody="Lizards are a widespread group of squamate reptiles, with over 6,000
-                species, ranging across all continents except Antarctica"></HomeCard>
+            <Grid item xs={10}>
+                <PvpTable data={2}></PvpTable>
 
             </Grid>
-            <Grid  item xs={4}>
-            <HomeCard cardHeader="Lizard" imageName="logo512.png"
-            cardBody="Lizards are a widespread group of squamate reptiles, with over 6,000
-                species, ranging across all continents except Antarctica"></HomeCard>
-            </Grid> */}
+            <Grid item xs={2}>
+                {/* {Ignore this fo rnow} */}
+                <Item><p>Azeroth Daily</p></Item>
+            </Grid>
+            
             <Grid item xs={12}>
-                <Item><PvpTable></PvpTable></Item>
+                <Item></Item>
             </Grid>
         </Grid>
 
         </Container>
-    </BodyWrapper>
     </div>);
 }
+
+
+// {/* <Grid  item xs={4}>
+//             <HomeCard cardHeader="Lizard" imageName="logo512.png"
+//             cardBody="Lizards are a widespread group of squamate reptiles, with over 6,000
+//                 species, ranging across all continents except Antarctica"></HomeCard>
+//             </Grid>
+//             <Grid  item xs={4}>
+//             <HomeCard cardHeader="Lizard" imageName="logo512.png"
+//             cardBody="Lizards are a widespread group of squamate reptiles, with over 6,000
+//                 species, ranging across all continents except Antarctica"></HomeCard>
+
+//             </Grid>
+//             <Grid  item xs={4}>
+//             <HomeCard cardHeader="Lizard" imageName="logo512.png"
+//             cardBody="Lizards are a widespread group of squamate reptiles, with over 6,000
+//                 species, ranging across all continents except Antarctica"></HomeCard>
+//             </Grid> */}
