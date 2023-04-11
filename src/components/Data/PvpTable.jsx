@@ -10,8 +10,7 @@ import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import { Button, CardActionArea, CardActions, Typography } from '@mui/material';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#0B2B33',
@@ -25,46 +24,124 @@ const Item = styled(Paper)(({ theme }) => ({
     justifyContent: 'flex-start',
   }));
 
+const StyledCard = styled(Card)(({theme})=>({
+    marginRight: 60,
+    color: 'green',
+    minWidth: 270,
+    backgroundColor: theme.palette.primary.light,
+
+}));
+
+
+const testData ={
+  "_links": {
+      "self": {
+          "href": "https://us.api.blizzard.com/profile/wow/character/sargeras/slimwind/pvp-bracket/rbg?namespace=profile-us"
+      }
+  },
+  "character": {
+      "key": {
+          "href": "https://us.api.blizzard.com/profile/wow/character/sargeras/slimwind?namespace=profile-us"
+      },
+      "name": "Slimwind",
+      "id": 194226160,
+      "realm": {
+          "key": {
+              "href": "https://us.api.blizzard.com/data/wow/realm/76?namespace=dynamic-us"
+          },
+          "name": "Sargeras",
+          "id": 76,
+          "slug": "sargeras"
+      }
+  },
+  "faction": {
+      "type": "ALLIANCE",
+      "name": "Alliance"
+  },
+  "bracket": {
+      "id": 3,
+      "type": "BATTLEGROUNDS"
+  },
+  "rating": 1490,
+  "season": {
+      "key": {
+          "href": "https://us.api.blizzard.com/data/wow/pvp-season/34?namespace=dynamic-us"
+      },
+      "id": 34
+  },
+  "tier": {
+      "key": {
+          "href": "https://us.api.blizzard.com/data/wow/pvp-tier/18?namespace=static-10.0.5_47621-us"
+      },
+      "id": 18
+  },
+  "season_match_statistics": {
+      "played": 33,
+      "won": 15,
+      "lost": 18
+  },
+  "weekly_match_statistics": {
+      "played": 0,
+      "won": 0,
+      "lost": 0
+  }
+};
+const StyledTypo = styled(Typography)(({theme})=>({
+  display:'flex',
+  alignItems:'flex-start',
+  justifyContent:'flex-start',
+}));
+
 export function PvpTable(props){
     return(
         <Item>
-        <Card sx={{ maxWidth: 240 }}>
-            <CardActionArea>
-                <CardMedia
-                component="img"
-                height="140"
-                image="./public/logo.png"
-                alt="green iguana"
-                />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Lizard
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-      </CardActions>
-    </Card>
-    <Card sx={{ maxWidth: 240 }}>
+        <StyledCard>
       <CardActionArea>
-      <Typography sx={{ fontSize: 28 }} color="text.secondary" gutterBottom>
+      <Typography variant="h4" color="text.secondary" gutterBottom>
           2v2
         </Typography>
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <StyledTypo sx={{display:'flex', alignItems:'flex-start',justifyContent:'flex-start'}} gutterBottom variant="h5" component="div">
+            Rating:
+          </StyledTypo>
+          <StyledTypo gutterBottom variant="h5" component="div">
+            Season Wins:
+          </StyledTypo>
+          <StyledTypo gutterBottom variant="h5" component="div">
+            Season Loses:
+          </StyledTypo>
+          <StyledTypo gutterBottom variant="h5" component="div">
+            Season W/L%:
+          </StyledTypo>
+          <StyledTypo gutterBottom variant="h5" component="div">
+            Weekly Wins:
+          </StyledTypo>
+          <StyledTypo gutterBottom variant="h5" component="div">
+            Weekly Loses:
+          </StyledTypo>
+          <StyledTypo gutterBottom variant="h5" component="div">
+            Weekly W/L%:
+          </StyledTypo>
+          <StyledTypo gutterBottom variant="h5" component="div">
+            Rank:
+          </StyledTypo>
+        </CardContent>
+      </CardActionArea>
+    </StyledCard>
+
+    <StyledCard>
+      <CardActionArea>
+      <StyledTypo sx={{ fontSize: 28 }} color="text.secondary" gutterBottom>
+          3v3
+        </StyledTypo>
+        <CardContent>
+          <StyledTypo gutterBottom variant="h5" component="div">
             Lizard
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
+          </StyledTypo>
+          <StyledTypo variant="body2" color="text.secondary">
             Lizards are a widespread group of squamate reptiles, with over 6,000
             species, ranging across all continents except Antarctica
-          </Typography>
+          </StyledTypo>
         </CardContent>
       </CardActionArea>
       <CardActions>
@@ -72,7 +149,28 @@ export function PvpTable(props){
           Share
         </Button>
       </CardActions>
-    </Card>
+    </StyledCard>
+    <StyledCard>
+      <CardActionArea>
+      <StyledTypo sx={{ fontSize: 28 }} color="text.secondary" gutterBottom>
+          RBG
+        </StyledTypo>
+        <CardContent>
+          <StyledTypo gutterBottom variant="h5" component="div">
+            Lizard
+          </StyledTypo>
+          <StyledTypo variant="body2" color="text.secondary">
+            Lizards are a widespread group of squamate reptiles, with over 6,000
+            species, ranging across all continents except Antarctica
+          </StyledTypo>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        <Button size="small" color="primary">
+          Share
+        </Button>
+      </CardActions>
+    </StyledCard>
 
             </Item>
     );

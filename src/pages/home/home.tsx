@@ -36,8 +36,7 @@ export function Home(){
 
     
     //{type: 'ADD_NAME', name:'Slimwind'}
-    return(<div className="App">
-    
+    return(<div className="App" >
         <header className="App-header">
             <Navbar></Navbar>
             </header>
