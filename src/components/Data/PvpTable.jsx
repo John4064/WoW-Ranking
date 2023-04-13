@@ -102,28 +102,25 @@ export function PvpTable(props){
         </Typography>
         <CardContent>
           <StyledTypo sx={{display:'flex', alignItems:'flex-start',justifyContent:'flex-start'}} gutterBottom variant="h5" component="div">
-            Rating:
+            Rating: {testData.rating}
           </StyledTypo>
           <StyledTypo gutterBottom variant="h5" component="div">
-            Season Wins:
+            Season Wins: {testData.season_match_statistics.won}
           </StyledTypo>
           <StyledTypo gutterBottom variant="h5" component="div">
-            Season Loses:
+            Season Loses: {testData.season_match_statistics.lost}
           </StyledTypo>
           <StyledTypo gutterBottom variant="h5" component="div">
-            Season W/L%:
+            Season W/L: {Math.round((testData.season_match_statistics.won/testData.season_match_statistics.lost)*100)/100}%
           </StyledTypo>
           <StyledTypo gutterBottom variant="h5" component="div">
-            Weekly Wins:
+            Weekly Wins: {testData.weekly_match_statistics.won}
           </StyledTypo>
           <StyledTypo gutterBottom variant="h5" component="div">
-            Weekly Loses:
+            Weekly Loses: {testData.weekly_match_statistics.lost}
           </StyledTypo>
           <StyledTypo gutterBottom variant="h5" component="div">
-            Weekly W/L%:
-          </StyledTypo>
-          <StyledTypo gutterBottom variant="h5" component="div">
-            Rank:
+            Weekly W/L%: {Math.round((testData.weekly_match_statistics.won/testData.weekly_match_statistics.lost)*100)/100}%
           </StyledTypo>
         </CardContent>
       </CardActionArea>
